@@ -32,8 +32,19 @@ Rails.application.configure do
   config.action_mailer.asset_host = "http://localhost:3000"
 
   # Deliver emails to a development mailbox at /letter_opener
-  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_caching = false
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+      :address              => 'smtp.eu.mailgun.org',
+      :port                 => 465,
+      :domain               => 'mg.participation.tools',
+      :user_name            => 'postmaster@mg.participation.tools',
+      :password             => '4ae1607aaad079edbb0c96ba50da00c0-aa4b0867-2b0be2df',
+      :authentication => :plain,
+      :enable_starttls_auto => true,
+      :ssl => false
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
