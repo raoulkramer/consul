@@ -80,7 +80,9 @@ header {
     background-image: none !important;
     min-height: $line-height * 10;
     @include breakpoint(small) 
-.logo img {
+}
+
+    .logo img {
     height: 62px;
     margin-right: 0.75rem;
     margin-top: 0;
