@@ -17,6 +17,7 @@ RUN echo 'Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bi
 RUN chmod 0440 /etc/sudoers.d/secure_path
 
 COPY scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY scripts/wait-for-it.sh /usr/local/bin/wait-for-it.sh
 
 # Define where our application will live inside the image
 ENV RAILS_ROOT /var/www/consul
