@@ -37,7 +37,7 @@ services:
 volumes:
   docker-example-postgres: {}
   bundle: {}
-# networks:
-#   default:
-#     external:
-#       name: nginx-proxy_default
+networks:
+  default:
+    external:
+      name: nginxproxy_default
