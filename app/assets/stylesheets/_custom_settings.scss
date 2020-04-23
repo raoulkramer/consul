@@ -4,12 +4,12 @@
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
 
-$brand: #50A7DD;
-$brand-secondary:   #4C4C4C;
-$primary-color: #E40006;
+// $brand: ;
+// $brand-secondary:   #4C4C4C;
+//$primary-color: #E40006;
 $body-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 $header-font-family: $body-font-family;
-$link:             #E40006;
+// $link:             #E40006;
 
 footer {    color:  $text-light !important;
 }
@@ -44,10 +44,10 @@ header {
             background-color: #fff !important;
         }
 .menu.simple h2 {
-            color: #50A7DD !important;
+            color: $brand !important;
         }
 .menu.simple h2 a {
-            color: #50A7DD !important;
+            color: $brand !important;
         }
 .menu-icon.dark {
             width: 37px !important;
@@ -75,7 +75,7 @@ header {
          
 .auth-image {
     background-color: #fff !important;
-    border-right: 3px solid #50A7DD !important;
+    border-right: 3px solid $brand !important;
     border-top: 15px solid $brand;
     background-image: none !important;
     min-height: $line-height * 10;

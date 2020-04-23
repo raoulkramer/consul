@@ -1,6 +1,6 @@
 <footer>
   <div class="row">
-    <div class="small-12 large-4 column">
+    <div class="small-12 medium-4 column">
       <h1 class="logo">
         <%= link_to t("layouts.header.open_gov", open: t("layouts.header.open")), root_path %>
       </h1>
@@ -13,11 +13,14 @@
       </p>
     </div>
 
-    <div class="footer-sections small-12 large-8 column">
+    <div class="footer-sections small-12 medium-4 column">
       <div class="small-12 medium-4 column">
         <%= link_to t("layouts.footer.participation_title"), root_path, class: "title" %>
         <p><%= t("layouts.footer.participation_text") %></p>
       </div>
+    </div>
+    <div class="small-12 medium-4 column">
+      <%= raw content_block("footer", I18n.locale) %>
     </div>
   </div>
 
