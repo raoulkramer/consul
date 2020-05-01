@@ -30,6 +30,7 @@ module Consul
       "es",
       "fa",
       "fr",
+      "ge",
       "gl",
       "he",
       "hr",
