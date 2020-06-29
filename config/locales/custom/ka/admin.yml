@@ -483,7 +483,7 @@ ka:
           process: პროცესი
           debate_phase: დებატების ფაზა
           draft_phase: პროექტის ფაზა
-          draft_phase_description: თუ ეს ფაზა აქტიურია, პროცესი არ გამოჩნდება პროცესების საძიებელში. ჩართეთ პროექტის ესკიზი და შექმენით კონტენტი დაწყებამდე.
+          draft_phase_description: თუ ეს ფაზა აქტიურია, პროცესი არ გამოჩნდება პროცესების საძიებელში. გააქტიურეთ პროცესის წინასწარ გადახედვის ფუნქცია.
           allegations_phase: კომენტარების ფაზა
           proposals_phase: ინიციატივების ფაზა
           use_markdown: ტექსტის ფორმატირებისთვის გამოიყენეთ შემცირების ღილაკი
@@ -496,13 +496,13 @@ ka:
         index:
           create: ახალი პროცესი
           delete: წაშლა
-          title: ერთობლივი სამოქალაქო ინიციატივა
+          title: საკანონმდებლო ინიციატივა
           filters:
             active: აქტიური
             all: ყველა
         new:
           back: უკან
-          title: ახალი ერთობლივი სამოქალაქო ინიციატივის პროცესის შექმნა
+          title: ახალი საკანონმდებლო ინიციატივის პროცესის შექმნა
           submit_button: პროცესის შექმნა
         proposals:
           select_order: დალაგება
@@ -687,7 +687,7 @@ ka:
       title_settings: პარამეტრები
       title_site_customization: საიტის შინაარსი
       title_booths: ხმის მიცემის კაბინები
-      legislation: ერთობლივი სამოქალაქო ინიციატივა
+      legislation: საკანონმდებლო ინიციატივა
       users: მომხმარებლები
       dashboard: ინიციატივათა მართვის დაფა
       administrator_tasks: მოთხოვნილი რესურსები
@@ -1008,7 +1008,7 @@ ka:
         dates: "თარიღები"
         start_date: "დაწყების თარიღი"
         closing_date: "დასრულების თარიღი"
-        geozone_restricted: "შეზღუდულია უბნების მიხედვით"
+        geozone_restricted: "შეზღუდულია ოლქების მიხედვით"
       new:
         title: "ახალი გამოკითხვა"
         submit_button: "გამოკითხვის შექმნა"
@@ -1149,13 +1149,13 @@ ka:
         official_updated: ინფორმაცია თანამდებობის პირის შესახებ დამახსოვრებულია
       index:
         title: თანამდებობის პირები
-        help: იმ მომხმარებელთა ანგარიშებს, რომელთა სტატუსიც მონიშნულია, როგორც თანამდებობის პირი, წვდომა ექნებათ პლატფორმაზე და განახორციელებენ შესაბამის მოქმედებებს. თქვენ შეგიძლიათ განსაზღვროთ ის ტეგები, რომლებიც ამ მომხმარებელთა ანგარიშების გვერდით გამოჩნდება, ყველაზე მნიშვნელოვანიდან (1 დონე) ყველაზე ნაკლებ მნიშვნელოვნამდე (მე-5 დონე).
+        help: იმ მომხმარებელთა ანგარიშებს, რომელთა სტატუსიც მონიშნულია, როგორც თანამდებობის პირი, წვდომა ექნებათ პლატფორმაზე და განახორციელებენ შესაბამის მოქმედებებს. თქვენ შეგიძლიათ განსაზღვროთ ის ტეგები, რომლებიც ამ მომხმარებელთა ანგარიშების გვერდით გამოჩნდება, ყველაზე მნიშვნელოვანიდან (1-ლი დონე) ყველაზე ნაკლებ მნიშვნელოვნამდე (მე-5 დონე).
         no_officials: თანამდებობის პირის სტატუსის მქონე მომხმარებლები არ მოიძებნა.
         name: სახელი
         official_position: ოფიციალური თანამდებობა
         official_level: დონე
       level_0: არ არის თანამდებობის პირი
-      level_1: 1-ელი დონე
+      level_1: 1-ლი დონე
       level_2: მე-2 დონე
       level_3: მე-3 დონე
       level_4: მე-4 დონე
@@ -1217,15 +1217,15 @@ ka:
           without_confirmed_hide: მოლოდინის რეჟიმშია
         title: დამალული ინიციატივები
         no_hidden_proposals: დამალული ინიციატივები არ მოიძებნა.
-    proposal_notifications:
+    hidden_proposal_notifications:
       index:
-        filter: ფილტრი
+        filter: Filter
         filters:
-          all: ყველა
-          with_confirmed_hide: დადასტურებულია
-          without_confirmed_hide: მოლოდინის რეჟიმშია
-        title: დამალული შეტყობინებები
-        no_hidden_proposals: დამალული შეტყობინებები არ მოიძებნა.
+          all: All
+          with_confirmed_hide: Confirmed
+          without_confirmed_hide: Pending
+        title: Hidden notifications
+        no_hidden_proposals: There are no hidden notifications.
     settings:
       flash:
         updated: ღირებულება განახლდა
@@ -1311,9 +1311,9 @@ ka:
         name: სახელი
         external_code: გარეშე კოდი
         census_code: აღწერის კოდი
-        code_help: აღწერის API-ში ინიცირებული გეოგრ. ზონის პასუხის კოდი
+        code_help: აღწერის API-ში ინიცირებული გეოგრ. ზონის საიდენტიფიკაციო კოდი
         coordinates: კოორდინატები
-        coordinates_help: კოორდინატები, რომელთა საშუალებითაც HTML რუკაზე გენერირდება ტერიტორია, რომელიც ირეაგირებს შეხებაზე
+        coordinates_help: კოორდინატები, რომელთა საშუალებითაც HTML რუკაზე გენერირდება ტერიტორია, რომელიც ირეაგირებს მაუსით დაწკაპებაზე
       edit:
         form:
           submit_button: ცვლილებების შენახვა
@@ -1321,7 +1321,7 @@ ka:
         back: უკან დაბრუნება
       new:
         back: უკან დაბრუნება
-        creating: უბნის შექმნა
+        creating: ოლქის შექმნა
       delete:
         success: გეოგრაფიული ზონა წარმატებით წაიშალა
         error: ეს გეოგრაფიული ზონა ვერ წაიშლება, რადგანაც მასზე მიმაგრებულია სხვა ელემენტები
@@ -1365,9 +1365,9 @@ ka:
         stats_title: სტატისტიკა
         summary:
           comment_votes: კომენტარებზე მიცემული ხმები
-          comments: კომენტარები
+          comments: კომენტარი
           debate_votes: დებატებზე მიცემული ხმები
-          debates: დებატები
+          debates: დებატი
           proposal_votes: ინიციატივებზე მიცემული ხმები
           proposals: ინიციატივები
           budgets: ღია ბიუჯეტები
@@ -1384,13 +1384,13 @@ ka:
         participatory_budgets: მონაწილეობითი ბიუჯეტები
         direct_messages: პირდაპირი გზავნილები
         proposal_notifications: შეტყობინებები ინიციატივის თაობაზე
-        incomplete_verifications: ნაწილობრივ ვერიფიცირებული
+        incomplete_verifications: ნაწილობრივ გადამოწმებული
         polls: გამოკითხვები
       graph:
-        debate_created: დებატები
+        debate_created: დებატი
         visit: ვიზიტები
         level_2_user: მე-2 დონის მომხმარებლები
-        proposal_created: მოქალაქის წინადადებები
+        proposal_created: მოქალაქის წინადადება
       budgets:
         no_data_before_balloting_phase: "კენჭისყრის ფაზამდე საჩვენებელი მონაცემები არ მოიძებნა."
         title: "მონაწილეობითი ბიუჯეტები - მონაწილეობის სტატისტიკა"
@@ -1401,11 +1401,11 @@ ka:
         vote_count: ხმები
         participant_count: მონაწილეები
         votes_per_heading: თითოეულ რუბრიკაზე მიღებული ხმა
-        participants_per_district: მონაწილეთა რაოდენობა თითოეულ უბანზე
+        participants_per_district: მონაწილეთა რაოდენობა თითოეულ ოლქზე
       budget_supporting:
         title: "მხარდაჭერის ფაზის სტატისტიკა"
         headings: რუბრიკები
-        users: მომხმარებლები
+        users: მომხმარებელი
         vote_count: ხმები
         participant_count: მონაწილეები
       direct_messages:
@@ -1421,13 +1421,13 @@ ka:
         title: გამოკითხვის სტატისტიკა
         all: გამოკითხვები
         web_participants: ქსელის წევრები
-        total_participants: მონაწილეთა საერთო ჯამი
+        total_participants: მონაწილეთა საერთო რაოდენობა
         poll_questions: "შეკითხვები გამოკითხვიდან: %{poll}"
         table:
           poll_name: გამოკითხვა
           question_name: კითხვა
           origin_web: ქსელის წევრები
-          origin_total: მონაწილეთა საერთო ჯამი
+          origin_total: მონაწილეთა საერთო რაოდენობა
     tags:
       create: თემის შექმნა
       destroy: თემის წაშლა
@@ -1453,7 +1453,7 @@ ka:
       index:
         phone_not_given: ტელეფონი მითითებული არ არის
         sms_code_not_confirmed: არ არის დადასტურებული სმს კოდით
-        title: ნაწილობრივ ვერიფიცირებული
+        title: ნაწილობრივ გადამოწმებული
     site_customization:
       content_blocks:
         information: ინფორმაცია შინაარსის ბლოკებზე
