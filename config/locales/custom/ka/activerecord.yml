@@ -62,10 +62,10 @@ ka:
         other: "ორგანიზაციები"
       poll/booth:
         one: "კენჭისყრის კაბინა"
-        other: "კენჭისყრის კაბინები"
+        other: "კენჭისყრის კაბინა"
       poll/officer:
-        one: "დამკვირვებელი"
-        other: "დამკვირვებლები"
+        one: "კენჭისყრის ადმინისტრატორი"
+        other: "კენჭისყრის ადმინისტრატორი"
       poll/ballot_sheet:
         one: საარჩევნო ბიულეტენი
         other: საარჩევნო ბიულეტენები
@@ -112,7 +112,7 @@ ka:
         one: "საკითხი"
         other: "საკითხები"
       poll:
-        one: "გამოკითხვა"
+        one: "ხმის მიცემა"
         other: "გამოკითხვები"
       proposal_notification:
         one: "შეტყობინება ინიციატივის თაობაზე"
@@ -283,7 +283,7 @@ ka:
         summary: "შეჯამება"
         description: "აღწერა"
       poll/question:
-        poll_id: "გამოკითხვა"
+        poll_id: "ხმის მიცემა"
         title: "კითხვა"
         summary: "შეჯამება"
         description: "აღწერა"
@@ -292,8 +292,8 @@ ka:
         title: "კითხვა"
       poll/ballot_sheet:
         data: CSV მონაცემები
-        poll_id: გამოკითხვა
-        officer_assignment_id: დამკვირვებლის დანიშვნა
+        poll_id: ხმის მიცემა
+        officer_assignment_id: ადმინისტრატორის დანიშვნა
       poll/shift:
         task: "ამოცანა"
       proposal_notification:
@@ -556,7 +556,7 @@ ka:
       messages:
         translations_too_short: სავალდებულოა სულ მცირე ერთი თარგმანი
         record_invalid: "დადასტურება ვერ მოხერხდა: %{errors}"
-        another_poll_active: მოცემული პერიოდისთვის აქტიურია სხვა გამოკითხვა
+        another_poll_active: მოცემული პერიოდისთვის აქტიურია სხვა კენჭისყრა
         restrict_dependent_destroy:
           has_one: "ჩანაწერის წაშლა შეუძლებელია, რადგანაც არსებობს მასზე დამოკიდებული ქვეჩანაწერი: %{record}"
           has_many: "ჩანაწერის წაშლა შეუძლებელია, რადგანაც არსებობს მასზე დამოკიდებული %{record}"
