@@ -16,7 +16,7 @@ services:
 
     # use the Dockerfile next to this file
     build: .
-    entrypoint: /usr/local/bin/wait-for-it.sh database:5432 -- /usr/local/bin/entrypoint.sh
+    entrypoint: /usr/local/bin/wait-for-it.sh database_eecmd:5432 -- /usr/local/bin/entrypoint.sh
     command: bundle exec rails s -p 3000 -b "0.0.0.0"
     working_dir: /var/www/consul
 
