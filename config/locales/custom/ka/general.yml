@@ -755,7 +755,7 @@ ka:
     unfollow_entity: "%{entity} გამოწერის გაუქმება"
     outline:
       searcher: მაძიებელი
-    go_to_page: "გადასვლა "
+    go_to_page: "- "
     share: გაზიარება
     orbit:
       previous_slide: წინა სლაიდი
