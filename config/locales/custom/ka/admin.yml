@@ -1438,6 +1438,8 @@ ka:
         help: "როდესაც მომხმარებელი ქმნის ახალ ინიციატივას, აღნიშნული თემები გამოჩნდება, როგორც ძირითადი ტეგები."
     users:
       columns:
+        id: ID
+        erase_reason: Erase reason
         name: სახელი
         email: ელ.ფოსტა
         document_number: დოკუმენტის ნომერი
@@ -1446,6 +1448,10 @@ ka:
       index:
         title: მომხმარებელი
         no_users: მომხმარებლები არ მოიძებნა.
+        filter: Filter
+        filters:
+          active: Active
+          erased: Erased
       search:
         placeholder: მომხმარებლის ძებნა ელ. ფოსტის, სახელის ან დოკუმენტის ნომრის მიხედვით
         search: ძებნა
