@@ -1,3 +1,4 @@
+```
 if [ ! -f config/secrets.yml -a ! -f config/database.yml ]; then
     cp config/secrets.yml.example config/secrets.yml
     cp config/database-docker.yml.example config/database.yml
@@ -33,7 +34,7 @@ fi
 docker-compose up -d
 docker-compose run app bin/delayed_job -n 2 start
 
-
+```
 
 <!--
   Title: CONSUL
