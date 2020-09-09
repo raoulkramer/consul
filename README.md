@@ -1,3 +1,40 @@
+if [ ! -f config/secrets.yml -a ! -f config/database.yml ]; then
+    cp config/secrets.yml.example config/secrets.yml
+    cp config/database-docker.yml.example config/database.yml
+fi
+nano .env
+nano config/database.yml
+nano docker-compose.yml
+docker-compose build
+docker-compose up -d database
+docker-compose run app bundle install
+
+docker-compose run app rake db:create
+docker-compose run app rake db:migrate
+docker-compose run app rake db:seed
+#docker-compose run app rake db:dev_seed
+docker-compose run app rake assets:precompile
+
+if [ -f tmp/pids/server.pid ]; then
+    rm tmp/pids/server.pid
+fi
+
+docker-compose up -d
+docker-compose run app bin/delayed_job -n 2 start
+docker-compose run app rake jobs:work &
+
+## update
+git pull
+docker-compose build
+docker-compose run app rake assets:precompile
+if [ -f tmp/pids/server.pid ]; then
+    rm tmp/pids/server.pid
+fi
+docker-compose up -d
+docker-compose run app bin/delayed_job -n 2 start
+
+
+
 <!--
   Title: CONSUL
   Description: Citizen Participation and Open Government Application
