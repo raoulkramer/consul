@@ -72,10 +72,6 @@ ka:
         budget_investments: პროექტების მართვა
         table_name: სახელი
         table_phase: ფაზა
-        table_investments: ინვესტიციები
-        table_edit_groups: სათაურების ჯგუფები
-        table_edit_budget: რედაქტირება
-        table_admin_ballots: ბიულეტენები
         edit_groups: სათაურების ჯგუფების რედაქტირება
         edit_budget: ბიუჯეტის რედაქტირება
         admin_ballots: ადმინისტრაციული ბიულეტენები
@@ -117,7 +113,6 @@ ka:
     budget_groups:
       name: "სახელი"
       headings_name: "რუბრიკები"
-      headings_edit: "რუბრიკების რედაქტირება"
       headings_manage: "რუბრიკების მართვა"
       no_groups: "ჯგუფები არ მოიძებნა."
       amount:
@@ -133,6 +128,7 @@ ka:
       form:
         create: "ახალი ჯგუფის შექმნა"
         edit: "ჯგუფის რედაქტირება"
+        max_votable_headings_info: "მიესადაგება მხოლოდ პროექტების შერჩევის ფაზას. ხმის მიცემის ფაზაში მომხმარებლებს ჯგუფიდან მხოლოდ ერთი რუბრიკისთვის შეუძლიათ ხმის მიცემა."
         submit: "ჯგუფის შენახვა"
       index:
         back: "ბიუჯეტებში დაბრუნება"
@@ -149,6 +145,7 @@ ka:
         success_notice: "სათაური წარმატებით წაიშალა"
         unable_notice: "ინვესტიციებთან დაკავშირებული სათაურის წაშლა შეუძლებელია"
       form:
+        max_ballot_lines_info: 'მაქსიმალური რაოდენობა რუბრიკაში წარმოდგნელი პროექტებისა, რომელზეც ხმის მიცემა შეუძლია მომხმარებელს. ვრცელდება მხოლოდ იმ საბიუჯეტო პროექტებზე, რომლებზე ხმის მიცემაც დამტკიცების წესით ხორციელდება.'
         population_info: "ბიუჯეტის რუბრიკაში არსებული მოსახლეობის ველი გამოიყენება სტატისტიკური მიზნებისთვის და მიუთითებს იმაზე, თუ კონკრეტულ არეალზე მაცხოვრებელი მოსახლეობის რამდენმა პროცენტმა მისცა ხმა. ეს ველი არჩევითია და შესაბამისად, შეგიძლიათ დატოვოთ ცარიელი."
         coordinates_info: "თუ გრძედი და განედი მითითებულია, ამ რუბრიკისთვის გამოყოფილ ინვესტიციების გვერდზე განთავსებული იქნება რუკა, რომლის ცენტრიც აღმიშნული კოორდინატებიდან აითვლება."
         content_blocks_info: "თუ შინაარსის ბლოკი ჩართულია, თქვენ შეძლებთ შექმნათ ამ თემასთან დაკავშირებული პერსონალური ინფორმაცია შემდეგი მანიპულაციებით > პარამეტრები> პერსონალური შინაარსის ბლოკები. შექმნილი ინფორმაცია აღნიშნული რუბრიკის ინვესტიციების გვერდზე გამოჩნდება."
@@ -295,8 +292,6 @@ ka:
         table_name: სახელი
         table_description: აღწერა
         table_actions: მოქმედებები
-        delete: წაშლა
-        edit: რედაქტირება
       edit:
         title: ეტაპის სტატუსის რედაქტირება
       update:
@@ -359,8 +354,6 @@ ka:
         index:
           description: "ინიციატივის შექმნასთან ერთად, მომხმარებელს ენიჭება წვდომა ინიციატივების დაფაზე, სადაც მათ მიერ წამოჭრილი იდეების მხარდასაჭერად, თქვენ შეგეძლებათ შესთავაზოთ რესურსები და რეკომენდაციები."
           create: შექმენით რესურსი ან მოქმედება
-          edit: რედაქტირება
-          delete: წაშლა
           active: 'დიახ'
           inactive: 'არა'
           title: რესურსები და მოქმედებები
@@ -495,7 +488,6 @@ ka:
           banner_title: სათაურის ფერები
         index:
           create: ახალი პროცესი
-          delete: წაშლა
           title: საკანონმდებლო ინიციატივა
           filters:
             active: აქტიური
@@ -552,6 +544,7 @@ ka:
           back: უკან
           submit_button: ცვლილებების შენახვა
           warning: თქვენ წარმატებით დაარედაქტირეთ ტექსტი, არ დაგავიწყდეთ დამახსოვრების ღილაკზე დაჭერა.
+          markdown_changes_message: "You've edited the text without saving it. Do you confirm to leave the page?"
         form:
           title: '<span class="strong">%{draft_version_title}</span>-ის დარედაქტირება პროცესიდან სახელად <span class="strong">%{process_title}</span>'
           launch_text_editor: ტექსტის რედაქტორის გაშვება
@@ -625,7 +618,6 @@ ka:
         no_managers: მენეჯერები არ მოიძებნა.
       manager:
         add: დამატება
-        delete: წაშლა
       search:
         title: "მენეჯერები: მომხმარებლის ძებნა"
     menu:
@@ -705,7 +697,6 @@ ka:
         no_administrators: ადმინისტრატორები არ მოიძებნა.
       administrator:
         add: დამატება
-        delete: წაშლა
         restricted_removal: "სამწუხაროდ საკუთარ თავს ადმინისტრატორების სიიდან ვერ ამოშლით"
       search:
         title: "ადმინისტრატორები: მომხმარებლის ძებნა"
@@ -720,7 +711,6 @@ ka:
         no_moderators: მოდერატორები არ მოიძებნა.
       moderator:
         add: დამატება
-        delete: წაშლა
       search:
         title: "მოდერატორები: მომხმარებლის ძებნა"
     segment_recipient:
@@ -747,8 +737,6 @@ ka:
         sent: გაგზავნილია
         actions: მოქმედებები
         draft: მონახაზი
-        edit: რედაქტირება
-        delete: წაშლა
         preview: ესკიზი
         empty_newsletters: საინფორმაციო ბიულეტენები არ მოიძებნა
       new:
@@ -784,8 +772,6 @@ ka:
         sent: გაიგზავნა
         actions: მოქმედებები
         draft: მონახაზი
-        edit: რედაქტირება
-        delete: წაშლა
         preview: ესკიზი
         view: ნახვა
         empty_notifications: შეტყობინებები არ მოიძებნა
@@ -883,7 +869,6 @@ ka:
         can_edit_dossier: "შეუძლია დოსიეს რედაქტირება"
       valuator:
         add: შემფასებლებში დამატება
-        delete: წაშლა
       search:
         title: "შემფასებლები: მომხმარებლის ძებნა"
       form:
@@ -1225,7 +1210,7 @@ ka:
           with_confirmed_hide: Confirmed
           without_confirmed_hide: Pending
         title: Hidden notifications
-        no_hidden_proposals: There are no hidden notifications.
+        no_hidden_proposals: დამალული შეტყობინებები არ მოიძებნა.
     settings:
       flash:
         updated: ღირებულება განახლდა
@@ -1297,7 +1282,6 @@ ka:
       author: ავტორი
       content: შინაარსი
       created_at: შექმნის თარიღი
-      delete: წაშლა
       color_help: ჰექსადეციალური ფორმატი
       show_results_and_stats: "შედეგებისა და სტატისტიკის ჩვენება"
       results_and_stats_reminder: "ამ უჯრედების მონიშვნით შედეგები და/ან სტატისტიკა გახდება საჯარო და ყველას შეეძლება მათი ნახვა."
@@ -1305,8 +1289,6 @@ ka:
       index:
         title: გეოგრაფიული ზონა
         create: გეოგრაფიული ზონის შექმნა
-        edit: რედაქტირება
-        delete: წაშლა
       geozone:
         name: სახელი
         external_code: გარეშე კოდი
@@ -1438,8 +1420,8 @@ ka:
         help: "როდესაც მომხმარებელი ქმნის ახალ ინიციატივას, აღნიშნული თემები გამოჩნდება, როგორც ძირითადი ტეგები."
     users:
       columns:
-        id: ID
-        erase_reason: Erase reason
+        id: პირადობის მოწმობა
+        erase_reason: წაშლის მიზეზი
         name: სახელი
         email: ელ.ფოსტა
         document_number: დოკუმენტის ნომერი
@@ -1448,10 +1430,10 @@ ka:
       index:
         title: მომხმარებელი
         no_users: მომხმარებლები არ მოიძებნა.
-        filter: Filter
+        filter: ფილტრი
         filters:
-          active: Active
-          erased: Erased
+          active: მოქმედი
+          erased: წაშლილი
       search:
         placeholder: მომხმარებლის ძებნა ელ. ფოსტის, სახელის ან დოკუმენტის ნომრის მიხედვით
         search: ძებნა
@@ -1529,7 +1511,6 @@ ka:
           updated_at: განახლების თარიღი
           title: სათაური
           slug: მოკლე დასახელება
-          cards_title: ბარათები
           see_cards: ბარათების ნახვა
         cards:
           cards_title: ბარათები

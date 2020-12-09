@@ -36,6 +36,7 @@ module Consul
       "id",
       "it",
       "ka",
+      "ua",		
       "nl",
       "pl",
       "pt-BR",

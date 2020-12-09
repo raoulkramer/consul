@@ -241,7 +241,6 @@ ka:
       help: დახმარება
       my_account_link: ჩემი ანგარიში
       my_activity_link: ჩემი აქტივობა
-      open: გახსნა
       open_gov: ღია მმართველობა
       proposals: ინიციატივები
       poll_questions: ხმის მიცემა
@@ -252,8 +251,6 @@ ka:
           other: თქვენ გაქვთ %{count} შეტყობინება
         notifications: შეტყობინებები
         no_notifications: "თქვენ არ გაქვთ შეტყობინება"
-    admin:
-      watch_form_message: "თქვენ არ შეგინახავთ განხორციელებული ცვლილებები. გსურთ გვერდის დატოვება?"
   notifications:
     index:
       empty_notifications: თქვენ არ გაქვთ შეტყობინება.
@@ -299,8 +296,9 @@ ka:
       sign_in: Twitter-ით შესვლა
       sign_up: Twitter-ით რეგისტრაცია
       name: Twitter
-    info_sign_in: "ავტორიზაცია:"
-    info_sign_up: "რეგისტრაცია:"
+    info:
+      sign_in: "შესვლა:"
+      sign_up: "რეგისტრაციის გავლა:"
     or_fill: "ან შეავსეთ წინამდებარე ფორმა:"
   proposals:
     create:
@@ -468,7 +466,7 @@ ka:
       polls: ხმის მიცემა
       mailing: ელ. ფოსტა
       poster: პოსტერი
-      recommended_actions: რეკომენდირებული მოქმედებები
+      recommended_actions: რეკომენდებული მოქმედებები
       messages: მომხმარებლებთან შეტყობინების გაგზავნა
       related_content: მსგავსი ინფორმაცია
     form:
@@ -755,7 +753,7 @@ ka:
     unfollow_entity: "%{entity} გამოწერის გაუქმება"
     outline:
       searcher: მაძიებელი
-    go_to_page: "-"
+    go_to_page: "გადასვლა "
     share: გაზიარება
     orbit:
       previous_slide: წინა სლაიდი

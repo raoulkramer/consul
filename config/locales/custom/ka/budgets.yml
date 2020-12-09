@@ -4,11 +4,22 @@ ka:
       show:
         title: თქვენი ბიულეტენი
         amount_available:
-          knapsack: "You still have <span>%{amount}</span> to invest."
+          knapsack: "თქვენ დაგრჩათ <span>%{count}</span> ინვესტირებისათვის."
+          approval:
+            zero: "თქვენ დაგრჩათ <span>%{count}</span> ხმა."
+            one: "თქვენ დაგრჩათ <span>%{count}</span> ხმა."
+            other: "You can still cast <span>%{count}</span> votes."
         amount_spent:
-          knapsack: "Amount spent <span>%{amount}</span>"
+          knapsack: "დახარჯული თანხის რაოდენობა<span>%{count}</span>"
+          approval:
+            zero: "<span>%{count}</span> მიცემული ხმა"
+            one: "<span>%{count}</span> მიცემული ხმა"
+            other: "Votes cast: <span>%{count}</span>"
         amount_limit:
-          knapsack: "%{amount}"
+          knapsack: "%{count}"
+          approval:
+            one: "შეგიძლიათ ხმა მისცეთ <span>1</span> პროექტს"
+            other: "You can vote up to <span>%{count}</span> projects"
         no_balloted_group_yet: "ამ ჯგუფისთვის ჯერ ხმა არ მიგიციათ, ამის გაკეთება ახლა შეგიძლიათ!"
         remove: ხმის წაშლა
         voted:
@@ -25,6 +36,7 @@ ka:
         not_enough_money: "თქვენ უკვე გამოყავით ხელმისაწვდომი ბიუჯეტი.<br><small>გახსოვდეთ, შეგიძლიათ %{change_ballot} ნებისმიერ დროს</small>"
         no_ballots_allowed: შერჩევის ფაზა დახურულია
         different_heading_assigned: "თქვენ უკვე მიეცით ხმა სხვა რუბრიკაზე: %{heading_link}"
+        not_enough_available_votes: "თქვენ მიაღწიეთ დასაშვები ხმების მაქსიმალურ რაოდენობას"
         change_ballot: ხმების შეცვლა
         casted_offline: თქვენ უკვე მიიღეთ მონაწილეობა ინტერნეტის გარეშე
     groups:
@@ -77,7 +89,7 @@ ka:
       index:
         title: მონაწილეობითი ბიუჯეტირება
         unfeasible: არაგანხორციელებადი საინვესტიციო პროექტები
-        unfeasible_text: "კენჭისყრის საბოლოო ეტაპზე გადასასვლელად, ინვესტიციები უნდა აკმაყოფილებდეს გარკვეულ კრიტერიუმებს (ლეგალური მხარე, სიზუსტე, ბიუჯეტის ზღვართან თანხვედრა). ყველა ინვესტიცია, რომელიც არ აკმაყოფილებს ამ კრიტერიუმებს, აღინიშნება, როგორც არაგანხორციელებადი და გამოქვეყნდება შემდეგ ჩამონათვალში შესაბამის მოხსენებასთან ერთად. "
+        unfeasible_text: "კენჭისყრის საბოლოო ეტაპზე გადასასვლელად, ინვესტიციები უნდა აკმაყოფილებდეს გარკვეულ კრიტერიუმებს (ლეგალური მხარე, სიზუსტე, ბიუჯეტის ზღვართან თანხვედრა). ყველა ინვესტიცია, რომელიც არ აკმაყოფილებს ამ კრიტერიუმებს, აღინიშნება, როგორც არაგანხორციელებადი და გამოქვეყნდება შემდეგ ჩამონათვალში შესაბამის მოხსენებასთან ერთად."
         by_heading: "საინვესტიციო პროექტები მასშტაბით: %{heading}"
         search_form:
           button: ძებნა
@@ -90,11 +102,15 @@ ka:
           my_ballot: ჩემი ბიულეტენი
           voted_info:
             knapsack:
-              one: "<strong>You voted one proposal with a cost of %{amount_spent}</strong>"
+              one: "<strong>თქვენ ხმა მიეცით %{amount_spent} ღირებულების ერთ ინიციატივას</strong>"
               other: "<strong>You voted %{count} proposals with a cost of %{amount_spent}</strong>"
+            approval:
+              one: "<strong>თქვენ ხმა მიეცით ერთ ინიციატივას</strong>"
+              other: "<strong>You voted %{count} proposals</strong>"
           change_vote_info:
-            knapsack: "You can %{link} at any time until the close of this phase. No need to spend all the money available."
-          change_vote_link: "change your vote"
+            knapsack: "თქვენ შეგიძლიათ %{link} ნებისმიერ დროს, სანამ ფაზა არ დაიხურება. საჭირო არ არის მთელი თანხის დახარჯვა."
+            approval: "თქვენ შეგიძლიათ %{link} ნებისმიერ დროს, სანამ ფაზა არ დაიხურება."
+          change_vote_link: "ხმის შეცვლა"
           different_heading_assigned: "თქვენ უკვე მიეცით ხმა სხვა რუბრიკაზე: %{heading_link}"
           change_ballot: "თუ გადაწყვეტილებას შეცვლით, შეგიძლიათ %{check_ballot}-ში ხმების გაუქმება და თავიდან დაწყება."
           check_ballot_link: "მონიშნეთ და დაადასტურეთ ბიულეტენი"
@@ -154,6 +170,10 @@ ka:
     progress_bar:
       assigned: "თქვენ გამოყავით: "
       available: "ხელმისაწვდომი ბიუჯეტი: "
+      votes:
+        zero: "თქვენ შეარჩეთ <strong>0</strong> პროექტი <strong>%{limit}</strong> პროექტიდან"
+        one: "თქვენ შეარჩეთ <strong>%{limit}</strong> პროექტიდან <strong>1</strong>"
+        other: "You have selected <strong>%{count}</strong> projects out of <strong>%{limit}</strong>"
     show:
       group: ჯგუფი
       phase: მიმდინარე ფაზა

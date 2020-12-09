@@ -3,7 +3,7 @@
 # The "main" locale.
 base_locale: ka
 ## All available locales are inferred from the data by default. Alternatively, specify them explicitly:
-locales: [ka,en]
+locales: [ka,ua,en]
 ## Reporting locale, default: en. Available: en, ru.
 # internal_locale: en
 
