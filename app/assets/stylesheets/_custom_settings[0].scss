@@ -1,0 +1,125 @@
+// Overrides and adds customized foundation settings in this file
+// Read more on documentation:
+// * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
+// * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
+//
+
+// $brand: ;
+// $brand-secondary:   #4C4C4C;
+//$primary-color: #E40006;
+$body-font-family: "Arial GEO", Lato, Helvetica, Arial, sans-serif !important;
+$header-font-family: "Arial GEO", Lato !important;
+// $link:             #E40006;
+
+$body-font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif !important;
+
+body {
+    font-size: 98% !important;
+   }
+
+header {
+    font-size: 98% !important;
+   }   
+
+h1 {
+    font-size: 190% !important;
+   }  
+
+h2 {
+    font-size: 140% !important;
+   }  
+
+form .checkbox {
+    font-size: 90% !important;
+   }
+
+p {
+    font-size: 90% !important;
+   } 
+
+.button {
+    font-size: 90% !important;
+   }    
+
+footer {    color:  #4C4C4C !important;
+}
+
+footer  a { color: #4C4C4C !important
+}
+
+.footer {
+    background: #d7d7d7 !important;
+    border: #d7d7d7 !important;
+}
+
+header {
+    background: #fff !important;
+
+    .selected {
+        border-bottom: 1px solid #fff;
+      }
+    }
+
+.top-bar {
+        background: #fff !important;
+        color: #313131;
+        }
+      
+        ul {
+          background: none;
+          padding-right: rem-calc(15);
+        }
+.subnavigation a {
+            color: #333333 !important;
+            background-color: #fff !important;
+        }
+.menu.simple h2 {
+            color: $brand !important;
+        }
+.menu.simple h2 a {
+            color: $brand !important;
+        }
+.menu-icon.dark {
+            width: 37px !important;
+            height: 21px !important;
+        }    
+.menu-icon {
+            background-color: #333333 !important;
+        }
+
+.top-bar
+.menu > li a {
+    color: #313131 !important;
+    background-color: #fff !important;
+}
+
+.top-bar
+.top-bar-title a img{
+    height: 60px !important;
+    margin: 15px !important;
+}
+
+.top-links {
+    background-color: #313131 !important;
+}
+         
+.auth-image {
+    background-color: #fff !important;
+    border-right: 3px solid $brand !important;
+    border-top: 15px solid $brand;
+    background-image: none !important;
+    min-height: $line-height * 10;
+    @include breakpoint(small) 
+}
+
+    .logo img {
+    height: 62px;
+    margin-right: 0.75rem;
+    margin-top: 0;
+    width: 206px;    
+}
+.background-header {
+    -webkit-clip-path: ellipse(0% 0% at 0% 0%) !important;
+    clip-path: ellipse(0% 0% at 0% 0%) !important;
+}
+
