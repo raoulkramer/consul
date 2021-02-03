@@ -557,6 +557,7 @@ table {
   margin-left: -$gap;
 
   .card {
+    $border-radius: rem-calc(8);
     margin-left: $gap;
 
     @include breakpoint(medium) {
@@ -569,11 +570,17 @@ table {
 
     a {
       @include grid-row-nest;
+      border-radius: $border-radius;
       box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 
       &:hover {
         border: 2px solid;
       }
+    }
+
+    .figure-card {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
     }
   }
 }
