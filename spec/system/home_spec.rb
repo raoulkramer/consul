@@ -138,7 +138,7 @@ describe "Home" do
     end
   end
 
-  scenario "if there are cards, the 'featured' title will render" do
+  scenario "if there are cards, the 'featured' title will not render" do
     create(:widget_card,
       title: "Card text",
       description: "Card description",
@@ -148,7 +148,8 @@ describe "Home" do
 
     visit root_path
 
-    expect(page).to have_css(".title", text: "Featured")
+    expect(page).not_to have_content "Featured"
+    expect(page).to have_content "Card text"
   end
 
   scenario "if there are no cards, the 'featured' title will not render" do
