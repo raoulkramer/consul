@@ -551,6 +551,33 @@ table {
   color: $brand;
 }
 
+.home-page .cards-container {
+  @include grid-column-gutter;
+  $gap: rem-calc(16);
+  margin-left: -$gap;
+
+  .card {
+    margin-left: $gap;
+
+    @include breakpoint(medium) {
+      @for $i from 1 through $grid-column-count {
+        &[data-columns='#{$i}'] {
+          width: calc(#{grid-column($i)} - #{$gap});
+        }
+      }
+    }
+
+    a {
+      @include grid-row-nest;
+      box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        border: 2px solid;
+      }
+    }
+  }
+}
+
 // 06. Budgets
 // -----------
 

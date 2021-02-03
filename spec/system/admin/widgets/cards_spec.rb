@@ -56,9 +56,9 @@ describe "Cards" do
 
     visit root_path
 
-    expect(page).to have_css("#widget_card_#{card_1.id}.medium-8")
-    expect(page).to have_css("#widget_card_#{card_2.id}.medium-4")
-    expect(page).to have_css("#widget_card_#{card_3.id}.medium-2")
+    expect(page).to have_css("#widget_card_#{card_1.id}[data-columns='8']")
+    expect(page).to have_css("#widget_card_#{card_2.id}[data-columns='4']")
+    expect(page).to have_css("#widget_card_#{card_3.id}[data-columns='2']")
   end
 
   scenario "Edit" do
@@ -163,9 +163,9 @@ describe "Cards" do
 
         expect(page).to have_css(".card", count: 3)
 
-        expect(page).to have_css("#widget_card_#{card_1.id}.medium-8")
-        expect(page).to have_css("#widget_card_#{card_2.id}.medium-4")
-        expect(page).to have_css("#widget_card_#{card_3.id}.medium-2")
+        expect(page).to have_css("#widget_card_#{card_1.id}[data-columns='8']")
+        expect(page).to have_css("#widget_card_#{card_2.id}[data-columns='4']")
+        expect(page).to have_css("#widget_card_#{card_3.id}[data-columns='2']")
       end
 
       scenario "Show label only if it is present" do
