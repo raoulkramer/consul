@@ -14,21 +14,21 @@
 <%= render "header", header: @header %>
 
 <main>
-  <%= render "feeds" %>
-
   <div class="row">
     <% if @cards.any? %>
-      <div class="small-12 column <%= "large-8" if feed_processes_enabled? %>">
+      <div class="small-12 column">
         <%= render "shared/cards" %>
       </div>
     <% end %>
-
-    <% if feed_processes_enabled? %>
-      <div class="small-12 large-4 column">
-        <%= render "processes" %>
-      </div>
-    <% end %>
   </div>
+
+  <%= render "feeds" %>
+
+  <% if feed_processes_enabled? %>
+    <div class="processes-feed">
+      <%= render "processes" %>
+    </div>
+  <% end %>
 
   <% if feature?("user.recommendations") && (@recommended_debates.present? || @recommended_proposals.present?) %>
     <%= render "recommended",

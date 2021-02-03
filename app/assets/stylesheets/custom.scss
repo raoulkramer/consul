@@ -551,6 +551,13 @@ table {
   color: $brand;
 }
 
+.home-page {
+
+  .processes-feed {
+    @include grid-row;
+  }
+}
+
 .home-page .cards-container {
   @include grid-column-gutter;
   $gap: rem-calc(16);
