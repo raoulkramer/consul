@@ -577,6 +577,7 @@ table {
 
     a {
       @include grid-row-nest;
+      background-color: $brand;
       border-radius: $border-radius;
       box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 
@@ -588,6 +589,18 @@ table {
     .figure-card {
       border-top-left-radius: $border-radius;
       border-top-right-radius: $border-radius;
+      margin: 0;
+    }
+
+    p {
+      @include grid-column-gutter;
+      color: $white;
+      font-weight: bold;
+      font-size: 1.5rem !important;
+      padding-bottom: $line-height / 2;
+      padding-top: $line-height / 2;
+      margin: 0;
+      text-align: center;
     }
   }
 }

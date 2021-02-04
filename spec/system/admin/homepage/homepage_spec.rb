@@ -136,21 +136,21 @@ describe "Homepage" do
     expect(page).to have_css(".card", count: 2)
 
     within("#widget_card_#{card1.id}") do
-      expect(page).to have_content("Card1 label")
       expect(page).to have_content("Card1 text")
-      expect(page).to have_content("Card1 description")
-      expect(page).to have_content("Link1 text")
       expect(page).to have_link(href: "consul1.dev")
       expect(page).to have_css("img[alt='#{card1.image.title}']")
+      expect(page).not_to have_content("Card1 label")
+      expect(page).not_to have_content("Card1 description")
+      expect(page).not_to have_content("Link1 text")
     end
 
     within("#widget_card_#{card2.id}") do
-      expect(page).to have_content("Card2 label")
       expect(page).to have_content("Card2 text")
-      expect(page).to have_content("Card2 description")
-      expect(page).to have_content("Link2 text")
       expect(page).to have_link(href: "consul2.dev")
       expect(page).to have_css("img[alt='#{card2.image.title}']")
+      expect(page).not_to have_content("Card2 label")
+      expect(page).not_to have_content("Card2 description")
+      expect(page).not_to have_content("Link2 text")
     end
   end
 
